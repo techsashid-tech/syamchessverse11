@@ -1,0 +1,6 @@
+{
+  "name": "Free 3D Chess Online - Play Chess Instantly",
+  "description": "Play free 3D chess online without login or registration. Challenge AI opponents, solve chess puzzles, learn strategies and enjoy a cinematic chess experience on any device.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

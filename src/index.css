@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Cinzel', serif;
+  }
+  .font-tech {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* White and Golden Website Light Beam Pass - Imperial Gold & Diamond White */
+@keyframes whiteGoldSweep {
+  0% {
+    transform: translateX(-160%) skewX(-28deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  65% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateX(260%) skewX(-28deg);
+    opacity: 0;
+  }
+}
+
+.animate-white-gold-sweep {
+  animation: whiteGoldSweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Golden Imperial Glow Pulse */
+@keyframes goldGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.35), 0 0 45px rgba(251, 191, 36, 0.2), inset 0 0 15px rgba(254, 240, 138, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 55px rgba(245, 158, 11, 0.75), 0 0 75px rgba(251, 191, 36, 0.45), inset 0 0 25px rgba(254, 240, 138, 0.35);
+  }
+}
+
+.pulse-glow-gold {
+  animation: goldGlowPulse 2.4s infinite ease-in-out;
+}
+
+/* Premier Website Light Beam Pass - Royal Gold & Ruby Spectrum */
+@keyframes premierSweep {
+  0% {
+    transform: translateX(-150%) skewX(-30deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  65% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(250%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+.animate-premier-sweep {
+  animation: premierSweep 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Royal Imperial Light Beam Sweep */
+@keyframes royalSweep {
+  0% {
+    transform: translateX(-160%) skewX(-25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(260%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-royal-sweep {
+  animation: royalSweep 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Fast button lightpass */
+@keyframes lightpass {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  50%, 100% {
+    transform: translateX(250%) skewX(-25deg);
+  }
+}
+
+.animate-lightpass {
+  animation: lightpass 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Royal Premier Glow Pulse */
+@keyframes royalGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.35), 0 0 45px rgba(245, 158, 11, 0.2), inset 0 0 15px rgba(239, 68, 68, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(239, 68, 68, 0.7), 0 0 70px rgba(245, 158, 11, 0.4), inset 0 0 25px rgba(239, 68, 68, 0.35);
+  }
+}
+
+.pulse-glow-royal {
+  animation: royalGlowPulse 2.4s infinite ease-in-out;
+}
+
+/* Red Neon Pulse Glows */
+@keyframes pulseGlowRed {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.35), inset 0 0 15px rgba(239, 68, 68, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(239, 68, 68, 0.75), inset 0 0 25px rgba(239, 68, 68, 0.35);
+  }
+}
+
+.pulse-glow-red {
+  animation: pulseGlowRed 2.4s infinite ease-in-out;
+}
+
+/* 3D Tagline Rotation & Flip */
+@keyframes flipTagline3D {
+  0% {
+    transform: perspective(800px) rotateX(90deg) translateZ(-40px);
+    opacity: 0;
+  }
+  15%, 85% {
+    transform: perspective(800px) rotateX(0deg) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(800px) rotateX(-90deg) translateZ(-40px);
+    opacity: 0;
+  }
+}
+
+.animate-3d-tagline {
+  animation: flipTagline3D 3.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  transform-style: preserve-3d;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.6);
+}
