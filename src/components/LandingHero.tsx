@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, Sparkles, Brain, Users, Compass, Zap, Flame, Shield, ChevronRight, BookOpen, Rotate3d } from 'lucide-react';
+import { Play, Sparkles, Brain, Users, Compass, Zap, Flame, Shield, ChevronRight, BookOpen, Rotate3d, ExternalLink } from 'lucide-react';
 import { GameMode } from '../types/chess';
 import { soundManager } from '../utils/audio';
 import { ConstellationBackground } from './ConstellationBackground';
@@ -131,6 +131,59 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
             <Zap className="w-4 h-4 text-amber-400" />
             <span>SELECT PRO AI MASTER</span>
           </button>
+        </div>
+
+        {/* 3D ANIMATED GLOWING & ZOOM-IN "SYAM CHESSVERSE 2D" VIP PORTAL BUTTON */}
+        <div className="pt-3 pb-1 w-full max-w-2xl mx-auto [perspective:1000px]">
+          <a
+            href="https://syamchessverse2d.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="syam-chessverse-2d-hero-button"
+            className="group relative block w-full rounded-3xl p-[3px] bg-gradient-to-r from-red-600 via-amber-400 via-yellow-300 to-rose-600 animate-3d-zoom-glow hover:scale-105 active:scale-95 transition-all duration-500 overflow-hidden text-left cursor-pointer no-underline"
+          >
+            {/* Outer pulsating neon halo glow */}
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-red-600 via-amber-400 to-yellow-400 opacity-70 blur-xl group-hover:opacity-100 transition duration-500 pointer-events-none" />
+
+            {/* Radiant diagonal 3D light-pass sweep beam */}
+            <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[-28deg] animate-portal-lightpass pointer-events-none z-20" />
+
+            {/* Inner Content Card */}
+            <div className="relative z-10 rounded-[21px] bg-gradient-to-r from-[#120703] via-[#1c0f07] to-[#0e0502] p-4 sm:p-5 flex items-center justify-between gap-4 border border-amber-400/50 group-hover:border-amber-300 transition-colors">
+              <div className="flex items-center gap-3.5 sm:gap-4.5">
+                {/* 3D Animated Chess Piece badge */}
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-tr from-red-600 via-amber-500 to-yellow-400 p-0.5 shadow-[0_0_25px_rgba(245,158,11,0.6)] group-hover:scale-110 group-hover:rotate-3 transition-transform flex-shrink-0 flex items-center justify-center">
+                  <div className="w-full h-full rounded-[14px] bg-black/90 flex flex-col items-center justify-center text-amber-300">
+                    <span className="text-2xl sm:text-3xl filter drop-shadow-[0_0_8px_rgba(245,158,11,0.9)]">♟️</span>
+                    <span className="text-[8px] sm:text-[9px] font-black font-tech text-amber-400 tracking-tighter uppercase">2D ARENA</span>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[10px] sm:text-xs font-tech font-bold text-red-300 uppercase tracking-widest">
+                    <Sparkles className="w-3 h-3 text-amber-400 animate-pulse" />
+                    <span>FEATURED PORTAL • RETRO & FAST BLITZ</span>
+                  </div>
+                  <h3 className="font-display font-black text-xl sm:text-2xl md:text-3xl text-white tracking-wide uppercase leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-amber-200 group-hover:to-yellow-400 transition-colors flex items-center gap-2">
+                    <span>Syam ChessVerse 2D</span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 font-medium leading-snug line-clamp-1">
+                    Play the ultra-fast 2D lightweight edition with zero lag & instant calculation!
+                  </p>
+                </div>
+              </div>
+
+              {/* Action arrow badge with glow */}
+              <div className="flex flex-col items-center justify-center flex-shrink-0">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-400 flex items-center justify-center text-slate-950 font-black shadow-[0_0_20px_rgba(245,158,11,0.7)] group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(245,158,11,1)] transition-all">
+                  <ExternalLink className="w-5 h-5 sm:w-6 sm:h-6 text-slate-950 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+                <span className="text-[10px] font-tech font-extrabold text-amber-300 mt-1 uppercase tracking-wider hidden sm:block">
+                  PLAY NOW
+                </span>
+              </div>
+            </div>
+          </a>
         </div>
 
         {/* Feature Gateways */}
